@@ -1,23 +1,23 @@
-import fizzBuzz from './index';
+import solution from './index';
 
 test("Fizz", () => {
-  expect(fizzBuzz(3)).toBe("Fizz");
-  expect(fizzBuzz(9)).toBe("Fizz");
-  expect(fizzBuzz(51)).toBe("Fizz");
+  expect (solution(3)).toBe("Fizz");
+  expect (solution(9)).toBe("Fizz");
+  expect (solution(51)).toBe("Fizz");
 });
 
 test("Buzz", () => {
-  expect(fizzBuzz(5)).toBe("Buzz");
-  expect(fizzBuzz(50)).toBe("Buzz");
+  expect (solution(5)).toBe("Buzz");
+  expect (solution(50)).toBe("Buzz");
 });
 
 test("FizzBuzz", () => {
-  expect(fizzBuzz(15)).toBe("FizzBuzz");
-  expect(fizzBuzz(30)).toBe("FizzBuzz");
+  expect(solution(15)).toBe("FizzBuzz");
+  expect(solution(30)).toBe("FizzBuzz");
 });
 
 test("number", () => {
-  expect(fizzBuzz(1)).toBe(1);
-  expect(fizzBuzz(2)).toBe(2);
-  expect(fizzBuzz(49)).toBe(49);
+  expect(solution(1)).toBe(1);
+  expect(solution(2)).toBe(2);
+  expect(solution(49)).toBe(49);
 });

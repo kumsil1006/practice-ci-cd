@@ -3,4 +3,8 @@ const fizzBuzz = (item: number): number | string => {
   return result ? result : item;
 };
 
-export default fizzBuzz;
+const solution = (item: number): number | string => {
+  return fizzBuzz(item)
+}
+
+export default solution;
