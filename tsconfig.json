@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "ES5",
+    "outDir": "./dist",
+    "moduleResolution": "Node",
+    "strict": true,
+    "lib": ["es2015", "DOM", "DOM.Iterable"]
+  },
+  "include": ["*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

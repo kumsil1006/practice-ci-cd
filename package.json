@@ -1,0 +1,32 @@
+{
+  "name": "practice-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kumsil1006/practice-javascript.git",
+  "author": "kumsil1006 <39304306+kumsil1006@users.noreply.github.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+        "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.ts$",
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "json"
+    ]
+},
+  "devDependencies": {
+    "@types/jest": "^29.2.3",
+    "jest": "^29.3.1",
+    "supertest": "^6.3.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.9.3"
+  }
+}
