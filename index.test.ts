@@ -3,6 +3,7 @@ import fizzBuzz from './index';
 test("Fizz", () => {
   expect(fizzBuzz(3)).toBe("Fizz");
   expect(fizzBuzz(9)).toBe("Fizz");
+  expect(fizzBuzz(51)).toBe("Fizz");
 });
 
 test("Buzz", () => {

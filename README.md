@@ -1,1 +1,1 @@
-# prace-javascript
+# practice-ci/cd
