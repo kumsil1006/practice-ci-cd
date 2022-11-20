@@ -1,0 +1,15 @@
+{
+  "name": "practice-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kumsil1006/practice-javascript.git",
+  "author": "kumsil1006 <39304306+kumsil1006@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
