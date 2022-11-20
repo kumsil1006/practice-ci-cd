@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "target": "ES5",
+    "target": "es6",
+    "module": "es2015",
     "outDir": "./dist",
-    "moduleResolution": "Node",
+    "rootDir": ".",
     "strict": true,
-    "lib": ["es2015", "DOM", "DOM.Iterable"]
-  },
-  "include": ["*.ts"],
-  "exclude": ["node_modules", "dist"]
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+     "jsx": "react"
+  }
 }
