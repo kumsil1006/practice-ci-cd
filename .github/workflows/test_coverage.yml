@@ -40,6 +40,9 @@ jobs:
             name/app
           tags: |
             type=semver,pattern={{raw}}
+      - name: print meta
+        run: |
+          echo ${{ steps.meta.outputs.tags }}
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v3.2.0
