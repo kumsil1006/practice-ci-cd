@@ -1,0 +1,35 @@
+name: test
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 13-github-tag-test
+    tags:
+      - test**
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      -
+        name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            name/app
+          tags: |
+            type=ref,event=tag
+            
+
+            
+      - name: print meta
+        run: |
+          echo ${{ steps.meta.outputs.tags }}
+
