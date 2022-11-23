@@ -16,18 +16,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "18.x"
-
-      -
-        name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
+          
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.1
         with:
-          images: |
-            name/app
-          tags: |
-            type=ref,event=tag
-            
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: print meta
         run: |
-          echo ${{ steps.meta.outputs.tags }}
+          echo ${{ steps.tag_version.outputs.new_tag }}
+          echo ${{ steps.tag_version.outputs }}          
 
