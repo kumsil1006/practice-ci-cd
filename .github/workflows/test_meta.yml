@@ -1,11 +1,11 @@
 name: test
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches:
-      - 13-github-tag-test
+      - main
     tags:
-      - test**
+      - 'v.**'
       
 jobs:
   build:
@@ -26,8 +26,6 @@ jobs:
             name/app
           tags: |
             type=ref,event=tag
-            
-
             
       - name: print meta
         run: |
