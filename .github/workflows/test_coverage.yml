@@ -38,8 +38,7 @@ jobs:
         with:
           images: |
             name/app
-          tags: |
-            type=semver,pattern={{raw}}
+            
       - name: print meta
         run: |
           echo ${{ steps.meta.outputs.tags }}
