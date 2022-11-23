@@ -26,6 +26,7 @@ jobs:
       - name: print meta
         run: |
           echo ${{ steps.tag_version.outputs.new_tag }}
+          echo ${{ steps.tag_version.outputs.previous_tag }}          
           echo ${{ steps.tag_version.outputs.changelog }}          
 
       - name: Create a GitHub release
