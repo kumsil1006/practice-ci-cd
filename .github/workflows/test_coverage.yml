@@ -1,9 +1,11 @@
 name: test
 on:
-  pull_request:
+  workflow_dispatch:
+  push:
     branches:
-      - main
-      - release
+      - 11-github-tag-bump-test
+    tags:
+      - 'v*'
   
 jobs:
   build:
