@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 11-github-tag-bump-test
+
     tags:
       - 'v*'
   
@@ -16,6 +17,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "18.x"
+
+      -
+        name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            name/app
+          tags: |
+            # output 0.1.2
+            type=semver,pattern={{version}}   
+            
       - name: Install & Test
         run: |
           yarn
@@ -33,13 +46,7 @@ jobs:
           username: kumsil1006
           password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
         
-      -
-        name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: |
-            name/app
+
             
       - name: print meta
         run: |
