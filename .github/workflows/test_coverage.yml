@@ -57,5 +57,4 @@ jobs:
         uses: docker/build-push-action@v3.2.0
         with:
           push: true
-          tags: ghcr.io/kumsil1006/oao-release
-          context: ./client            
+          tags: ghcr.io/kumsil1006/my-app          
