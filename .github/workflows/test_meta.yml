@@ -34,3 +34,13 @@ jobs:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
+          
+      - name: Bump version and push tag
+        id: updated_tag
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: print new release version
+        run: |
+          echo ${{ steps.updated_tag.outputs.new_tag }}          
