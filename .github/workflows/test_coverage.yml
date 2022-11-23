@@ -23,8 +23,7 @@ jobs:
           images: |
             name/app
           tags: |
-            # output 0.1.2
-            type=semver,pattern={{version}}   
+            type=ref,event=tag
             
       - name: Install & Test
         run: |
